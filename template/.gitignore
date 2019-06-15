@@ -1,0 +1,8 @@
+# Backup file
+*~
+
+# Windows thumbnail cache files
+Thumbs.db
+
+# macOS cache files
+.DS_Store
