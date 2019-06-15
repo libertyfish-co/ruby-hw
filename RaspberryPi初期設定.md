@@ -23,6 +23,24 @@ sudo raspi-config
 
 `5 Interfacing Options` -> `P4 SPI` -> `Yes`
 
+RaspberryPi を再起動します。
+
+```bash
+sudo reboot
+```
+
+正しく設定されていることを確認します。
+
+```bash
+ls /dev/spi*
+```
+
+次の通り表示されれば正しく設定されています。
+
+```
+/dev/spidev0.0  /dev/spidev0.1
+```
+
 ## rbenv インストール
 
 まず、ライブラリーをインストールします。
