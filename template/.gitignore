@@ -1,3 +1,7 @@
+# Ignore bundler config and downloaded libraries.
+/.bundle
+/vendor/bundle
+
 # Backup file
 *~
 
