@@ -1,0 +1,12 @@
+# Ignore bundler config and downloaded libraries.
+/.bundle
+/vendor/bundle
+
+# Backup file
+*~
+
+# Windows thumbnail cache files
+Thumbs.db
+
+# macOS cache files
+.DS_Store
