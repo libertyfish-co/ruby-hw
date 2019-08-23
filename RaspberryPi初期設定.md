@@ -15,7 +15,7 @@ Raspberry Pi 上のファイルを編集するのに使用します。
 ## SPI設定
 
 SPIはRaspberryPiで採用されているデバイス間で、データ通信を行う方式です。
-shell からは、`rsspi-config`を実行することで設定変更が行えます。
+shell からは、`raspi-config`を実行することで設定変更が行えます。
 
 ```bash
 sudo raspi-config
