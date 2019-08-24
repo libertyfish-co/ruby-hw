@@ -6,6 +6,7 @@
 1. 新しい Raspberry Pi はデフォルトで SSH が無効になっていますので、有効に変更します。
     1. ベリーマーク -> 設定 -> Raspberry Pi の設定 まで進みます。
     2. インターフェースタブ の SSH を有効に変更します。
+1. `ssh pi@raspberrypi.local` or `ssh pi@IPアドレス` でログインします。
 
 ## Samba インストール
 
