@@ -33,3 +33,12 @@
 * 距離センサーとADコンバーターの説明
 * 距離センサーから値を取得
 * 戦車を動かす
+
+
+ssh pi@r-000.local で ssh ログイン
+pw: raspberry
+sudo su -
+echo "edu ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/010_edu-nopasswd
+pi からログアウト
+edu@r-000.local で ssh ログイン
+pw: liberty
