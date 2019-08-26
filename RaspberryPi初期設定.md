@@ -52,6 +52,21 @@ sudo apt install -y libssl-dev libreadline-dev
 
 あとは [ubuntu + rbenvでrubyをインストール](https://qiita.com/tanagoda/items/44d12ef0d52b2dc9d560) を参考にインストールします。
 
+## sudo権限付与
+
+ユーザー `pi` 以外で開発する場合は、 `sudo` 権限の付与が必要です。
+`pi` には既に `sudo` 権限が割り当てられています。
+
+今回は、`edu` ユーザーに管理者権限を割り当てます。 `edu` 部分を読み替えてください。
+
+1. `ssh edu@raspberrypi.local` で `edu` ユーザーで ssh ログインする(ホスト名は適宜変更)
+1. `su pi -` で `pi` ユーザーでログインする
+1. `sudo su -` で `root` になる
+1. `echo "edu ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/010_edu-nopasswd` でパスワードなしで `sudo` ができるようする
+1. `exit` で `root` からログアウト
+1. `exit` で `pi`からログイアウト
+1. `sudo ls /root` でエラーが表示されなければ、正しく設定されている
+
 ## 開発環境整備
 
 `bundle install` でドキュメント類をインストールしない設定を行います。
