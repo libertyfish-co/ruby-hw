@@ -5,6 +5,8 @@
 今回は GPIO 21 番ピンを使用します。
 LED と 10K 抵抗を用いて次の配線図の通りに配線します。
 
+LEDの足が長い方がアノード(+)で短い方がカソード(-)です。
+
 <img src='https://raw.githubusercontent.com/libertyfish-co/ruby-hw/images/l_chika.png' alt='Lチカ 回路図' width="350" />
 
 ## コーディング
