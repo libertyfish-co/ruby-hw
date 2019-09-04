@@ -80,3 +80,18 @@ Rasbery Pi から GPIO にアクセスするためには、`sudo` を行う必�
 ```bash
 git clone https://github.com/dcarley/rbenv-sudo.git ~/.rbenv/plugins/rbenv-sudo
 ```
+
+## Rails インストール
+
+`pi`ユーザーで次のコマンドを実行します。
+
+```bash
+apt-get install nodejs
+```
+
+開発用ユーザー(`edu`)で次のコマンドを実行します。
+
+```bash
+gem install rails
+eval "$(rbenv init -)"
+```
