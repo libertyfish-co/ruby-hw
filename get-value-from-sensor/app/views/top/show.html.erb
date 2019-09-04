@@ -1,3 +1,23 @@
+<script type="text/javascript">
+  function led_on() {
+    var req = new XMLHttpRequest();
+    req.open('GET', '/leds/on', true);
+    req.send(null);
+  }
+
+  function led_off() {
+    var req = new XMLHttpRequest();
+    req.open('GET', '/leds/off', true);
+    req.send(null);
+  }
+</script>
+
 <h1>Sensor value</h1>
 
 <div><%= @sensor_value %></div>
+
+<p>
+  <input type='button' onClick='led_on()' value='LED On'>
+  /
+  <input type='button' onClick='led_off()' value='LED Off'>
+</p>

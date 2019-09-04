@@ -16,16 +16,21 @@ namespace :phototransistor_server do
 
       while token = socket.gets
         token.chomp!
+        puts "RECV: #{token}"
 
         case token
         when 'VALUE_REQUEST'
-          puts "RECV: #{token}"
-
           lux_value = lux
           puts "SEND: #{lux_value}"
 
           # クライアントへ文字列返却
           socket.puts lux_value
+        when 'LED_ON'
+          led_on(21)
+          socket.puts 'on'
+        when 'LED_OFF'
+          led_off(21)
+          socket.puts 'off'
         else
           puts "Unknown token type. Recived token: #{token}"
         end
@@ -38,6 +43,7 @@ namespace :phototransistor_server do
   end
 
   VOLT = 5.0
+  LED_PIN = PiPiper::Pin.new pin: 21, direction: :out
 
   def lux
     value = read(0)
@@ -59,5 +65,13 @@ namespace :phototransistor_server do
 
   def convert_lux(volt)
     volt / 0.0003
+  end
+
+  def led_on(pin)
+    LED_PIN.on
+  end
+
+  def led_off(pin)
+    LED_PIN.off
   end
 end
