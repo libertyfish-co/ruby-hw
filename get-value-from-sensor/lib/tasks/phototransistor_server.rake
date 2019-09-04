@@ -7,32 +7,57 @@ namespace :phototransistor_server do
   end
 
   # サーバ接続 OPEN
-  Serv = TCPServer.new(Settings.sensor.port)
+  Server = TCPServer.new(2000)
 
   def server_method
     loop do
       # ソケット OPEN （クライアントからの接続待ち）
-      sock = Serv.accept
+      socket = Server.accept
 
-      while msg = sock.gets
-        msg.chomp!
+      while token = socket.gets
+        token.chomp!
 
-        case msg
+        case token
         when 'VALUE_REQUEST'
-          puts "RECV: #{msg}"
+          puts "RECV: #{token}"
 
-          lux = Phototransistor.lux
-          puts "SEND: #{lux}"
+          lux_value = lux
+          puts "SEND: #{lux_value}"
 
           # クライアントへ文字列返却
-          sock.puts lux
+          socket.puts lux_value
         else
-          puts "Unknown message type. Recived message: #{msg}"
+          puts "Unknown token type. Recived token: #{token}"
         end
       end
 
+    ensure
       # ソケット CLOSE
-      sock.close
+      socket.close
     end
+  end
+
+  VOLT = 5.0
+
+  def lux
+    value = read(0)
+    volt = convert_volt(value)
+    convert_lux(volt)
+  end
+
+  def read(channel)
+    PiPiper::Spi.begin do |spi|
+      adc = spi.write [0x1, (0x8 + channel) << 4, 0x0]
+      ((adc[1] & 0x3) << 8) + adc[2]
+    end
+  end
+
+  def convert_volt(data)
+    volt = (data * VOLT) / 1023
+    volt.round(4)
+  end
+
+  def convert_lux(volt)
+    volt / 0.0003
   end
 end
