@@ -26,10 +26,10 @@ namespace :phototransistor_server do
           # クライアントへ文字列返却
           socket.puts lux_value
         when 'LED_ON'
-          led_on(21)
+          led_on
           socket.puts 'on'
         when 'LED_OFF'
-          led_off(21)
+          led_off
           socket.puts 'off'
         else
           puts "Unknown token type. Recived token: #{token}"
@@ -67,11 +67,11 @@ namespace :phototransistor_server do
     volt / 0.0003
   end
 
-  def led_on(pin)
+  def led_on
     LED_PIN.on
   end
 
-  def led_off(pin)
+  def led_off
     LED_PIN.off
   end
 end
