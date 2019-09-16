@@ -7,19 +7,48 @@ Webサーバーには Rails を使用します。
 Webサーバーと センサープログラム間は別のサーバーでネットワークでは繋がっていると仮定します。
 ネットワークで繋がっているので、 TCPSocket を利用します。
 
+## 注意
+
+本工程では、TCPSocket でポートをオープンしたり、ハードウェアに繋がったWebアプリを起動することになります。
+認証の機構を設ける等、対策が必要です。
+今回はテストプログラムなので、考慮していません。
+
 ## 配線
 
 [フォトトランジスターから値取得](フォトトランジスターから値取得.md)
 
 ## Rails アプリ作成
 
-### `rails new`
+### `bundle init`
 
 ```bash
 cd ~/
-rails new get-value-from-sensor --skip-yarn --skip-coffee --skip-javascript --skip-webpack-install
-cd get-value-from-sensor
-bundle install
+mkdir get-value-from-sensor ; cd $_
+bundle init
+```
+
+### Gemfile 編集
+
+```ruby
+# frozen_string_literal: true
+
+source "https://rubygems.org"
+
+git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
+
+gem "rails" # ここのコメントアウトを外します。
+```
+
+```bash
+bundle install --path vendor/bundle
+# かなり時間がかかります
+```
+
+### `rails new`
+
+```bash
+rails new . --skip-yarn --skip-coffee --skip-javascript --skip-webpack-install
+# 途中で Gemfile を上書きするか確認されますが、 Enter キーを押下する
 # かなり時間がかかります
 ```
 
@@ -122,12 +151,14 @@ end
 1つめ
 
 ```bash
+cd ~/get-value-from-sensor
 rbenv sudo bundle exec rails phototransistor_server:wake_up
 ```
 
 2つめ
 
 ```bash
+cd ~/get-value-from-sensor
 rails console
 
 socket = TCPSocket.open('localhost', 2000)
@@ -190,7 +221,17 @@ end
 
 ### 動作確認
 
+1つめ
+
 ```bash
+cd ~/get-value-from-sensor
+rbenv sudo bundle exec rails phototransistor_server:wake_up
+```
+
+2つめ
+
+```bash
+cd ~/get-value-from-sensor
 bundle exec rails server -b 0.0.0.0
 ```
 
@@ -217,5 +258,5 @@ wlan0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
 
 ## Let's try
 
-1. Lチカの配線を参考にして、LEDを配線して、ページ上のボタンで、LED を On Off できる様にしましょう。
-2. ページに表示している、フォトトランジスターの値をボタン押下で、更新する様にしましょう。
+1. ページに表示している、フォトトランジスターの値をボタン押下で、更新する様にしましょう。
+2. Lチカの配線を参考にして、LEDを配線して、ページ上のボタンで、LED を On Off できる様にしましょう。

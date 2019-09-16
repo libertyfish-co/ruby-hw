@@ -42,6 +42,22 @@ ls /dev/spi*
 /dev/spidev0.0  /dev/spidev0.1
 ```
 
+# オーディオ出力の無効化
+
+PWM(パルス信号) が RaspberryPi のオーディオと同じ回路を使用しています。 そのため、念のために RaspberryPi のオーディオ出力を無効化します。
+
+```bash
+sudo vi /boot/config.txt
+```
+
+```
+# ...
+
+#dtparam=audio=on # コメントアウトします
+
+# ...
+```
+
 ## rbenv インストール
 
 まず、ライブラリーをインストールします。
@@ -86,7 +102,7 @@ git clone https://github.com/dcarley/rbenv-sudo.git ~/.rbenv/plugins/rbenv-sudo
 `pi`ユーザーで次のコマンドを実行します。
 
 ```bash
-apt-get install nodejs
+sudo apt-get install nodejs
 ```
 
 開発用ユーザー(`edu`)で次のコマンドを実行します。
