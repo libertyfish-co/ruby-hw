@@ -47,7 +47,7 @@ bundle install --path vendor/bundle
 ### `rails new`
 
 ```bash
-rails new . --skip-yarn --skip-coffee --skip-javascript --skip-webpack-install
+bundle exec rails new . --skip-yarn --skip-coffee --skip-javascript --skip-webpack-install
 # 途中で Gemfile を上書きするか確認されますが、 Enter キーを押下する
 # かなり時間がかかります
 ```
@@ -63,7 +63,7 @@ gem 'pi_piper' # => PiPiper を使用するので追加
 追加した gem をインストールします。
 
 ```bash
-bundle install --path=vendor/bundle
+bundle install
 ```
 
 ### センサーサーバー作成
@@ -75,7 +75,7 @@ bundle install --path=vendor/bundle
 まず、コンソールでタスクのファイルを作成します。
 
 ```bash
-rails generate task phototransistor_server
+bundle exec rails generate task phototransistor_server
 ```
 
 `lib/tasks/phototransistor_server.rake` が作成されているので、以下の通り修正します。
@@ -159,7 +159,7 @@ rbenv sudo bundle exec rails phototransistor_server:wake_up
 
 ```bash
 cd ~/get-value-from-sensor
-rails console
+bundle exec rails console
 
 socket = TCPSocket.open('localhost', 2000)
 socket.puts 'VALUE_REQUEST'
@@ -173,7 +173,7 @@ socket.close
 TopPageを作成するために、次のコマンドを入力します。
 
 ```bash
-rails generate controller Top show
+bundle exec rails generate controller Top show
 ```
 
 `app/controllers/top_controller.rb` を修正してフォトトランジスターから値を取得して、Viewに渡すインスタンスを作成します。
