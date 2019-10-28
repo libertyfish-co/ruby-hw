@@ -209,7 +209,7 @@ end
 <div><%= @sensor_value %></div>
 ```
 
-このままでは、`/top/show` にアクセスする必要があります。 `routes.rb` を修正して `/` でアクセスできるようにします。
+このままでは、`/top/show` にアクセスする必要があります。 `config/routes.rb` を修正して `/` でアクセスできるようにします。
 
 ```ruby
 Rails.application.routes.draw do
