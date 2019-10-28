@@ -36,7 +36,7 @@ source "https://rubygems.org"
 
 git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
-gem "rails" # ここのコメントアウトを外します。
+gem "rails", "5.2.2" # ここのコメントアウトを外し、バージョンを指定します。(「,」を忘れずに)
 ```
 
 ```bash
@@ -47,7 +47,7 @@ bundle install --path vendor/bundle
 ### `rails new`
 
 ```bash
-bundle exec rails new . --skip-yarn --skip-coffee --skip-javascript --skip-webpack-install
+bundle exec rails new . --skip-yarn --skip-coffee --skip-javascript --skip-webpack-install --skip-bundle
 # 途中で Gemfile を上書きするか確認されますが、 Enter キーを押下する
 # かなり時間がかかります
 ```
@@ -63,7 +63,7 @@ gem 'pi_piper' # => PiPiper を使用するので追加
 追加した gem をインストールします。
 
 ```bash
-bundle install
+bundle update
 ```
 
 ### センサーサーバー作成
@@ -209,7 +209,7 @@ end
 <div><%= @sensor_value %></div>
 ```
 
-このままでは、`/top/show` にアクセスする必要があります。 `routes.rb` を修正して `/` でアクセスできるようにします。
+このままでは、`/top/show` にアクセスする必要があります。 `config/routes.rb` を修正して `/` でアクセスできるようにします。
 
 ```ruby
 Rails.application.routes.draw do
