@@ -14,7 +14,7 @@
 [GP2Y0A21YK0F のデータシート](https://www.mouser.jp/datasheet/2/365/gp2y0a21yk_e-1149917.pdf) の `Fig. 2 Example of distance measuring characteristice(output)` を参考にします。
 このセンサーは、 10 〜 80 cm までの距離が測れます。 0 〜 10 cm の間は、近い距離と遠い距離で同じ電圧になるのでどちらの距離かわからないので、 0 〜 10 cm の距離は測れません。
 
-<img src='https://raw.githubusercontent.com/libertyfish-co/ruby-hw/images/documents/GP2Y0A21YK0F_volt_graph.png' alt='Example of distance measuring characteristice' width="400" />
+<img src='https://raw.githubusercontent.com/libertyfish-co/ruby-hw/images/documents/GP2Y0A21YK0F_volt_graph1.png' alt='Example of distance measuring characteristice' width="400" />
 
 ## ADコンバーター
 
