@@ -24,8 +24,8 @@
 記載している製品は同等のものであれば代替えが可能です。
 
 | メーカー | 秋月 通販コード | 型番 | 商品名 | 備考 |
-|--|--|--|--|--:|--|
-| SanDisk | - | SDSQUNS-032G-GN3MN | SanDisk microSDHC ULTRA 32GB 80MB/s SDSQUNS-032G Class10 サンディスク | 1 | 8GB以上の容量が必要 |
+|--|--|--|--|--|
+| SanDisk | - | SDSQUNS-032G-GN3MN | SanDisk microSDHC ULTRA 32GB 80MB/s SDSQUNS-032G Class10 サンディスク | 8GB以上の容量が必要 |
 | Cixi Wanjie Electronic Co.,Ltd | P-05294 | BB-801 | ブレッドボード | |
 | Herwell Asia Limited | C-08932 | DG01032-0024-BK-015 | ブレッドボード・ジャンパーワイヤ（オス－メス）　１５ｃｍ（黒） | |
 | Cixi Wanjie Electronic Co.,Ltd | C-05159 | BBJ-65 | ブレッドボード・ジャンパーワイヤ（オス－オス）セット　各種 合計６０本以上 | |
