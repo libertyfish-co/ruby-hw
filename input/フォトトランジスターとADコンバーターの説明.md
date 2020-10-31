@@ -15,7 +15,7 @@
 5Vの電源に対して、どの抵抗値で幾つの電圧をカソードに流すかが記載されています。
 例えば 500Ωの抵抗を使った場合に、1000Lx(ルクス)の光が当たった場合は、大体 0.25 Vの電圧が流れることになります。
 
-<img src='https://raw.githubusercontent.com/libertyfish-co/ruby-hw/images/documents/NJL7502L_volt_graph.png' alt='NJL7502L Light Source' width="400" />
+<img src='https://raw.githubusercontent.com/libertyfish-co/ruby-hw/master/images/documents/NJL7502L_volt_graph.png' alt='NJL7502L Light Source' width="400" />
 
 ## ADコンバーター
 
