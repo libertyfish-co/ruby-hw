@@ -2,7 +2,7 @@
 
 ## SSH設定
 
-1. [Raspberry PiにNOOBSでOSをインストールする方法](https://raspida.com/raspixnoobs) を参考にOSのインストールを行います。
+1. [Raspberry PiにNOOBSでOSをインストールする方法](https://raspida.com/raspixnoobs){:target='_blank'} を参考にOSのインストールを行います。
 1. 新しい Raspberry Pi はデフォルトで SSH が無効になっていますので、有効に変更します。
     1. ベリーマーク -> 設定 -> Raspberry Pi の設定 まで進みます。
     2. インターフェースタブ の SSH を有効に変更します。
@@ -11,7 +11,7 @@
 ## Samba インストール
 
 Raspberry Pi 上のファイルを編集するのに使用します。
-[Ubuntu samba インストールチュートリアル](https://tutorials.ubuntu.com/tutorial/install-and-configure-samba) に従ってインストールします。
+[Ubuntu samba インストールチュートリアル](https://tutorials.ubuntu.com/tutorial/install-and-configure-samba){:target='_blank'} に従ってインストールします。
 
 ## SPI設定
 
@@ -66,7 +66,7 @@ sudo vi /boot/config.txt
 sudo apt install -y libssl-dev libreadline-dev
 ```
 
-あとは [ubuntu + rbenvでrubyをインストール](https://qiita.com/tanagoda/items/44d12ef0d52b2dc9d560) を参考にインストールします。
+あとは [ubuntu + rbenvでrubyをインストール](https://qiita.com/tanagoda/items/44d12ef0d52b2dc9d560){:target='_blank'} を参考にインストールします。
 
 ## sudo権限付与
 
