@@ -12,7 +12,7 @@
   * データ通信に用いる
 * PWM
   * パルス信号を出力する
-  * [PWMの詳しい説明](https://toshiba.semicon-storage.com/jp/design-support/e-learning/brushless_motor/chap3/1274512.html){: target="_blank"}
+  * [PWMの詳しい説明](https://toshiba.semicon-storage.com/jp/semiconductor/knowledge/e-learning/brushless-motor/chapter3/what-pwm.html){: target="_blank"}
   * RaspberryPi は 2チャンネル用意されている。同じチャンネルは同一の周波数を出す。
     * channel 1: GPIO 12, 18
     * channel 2: GPIO 13, 19
