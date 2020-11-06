@@ -1,4 +1,4 @@
 # Jekyll configuration
 markdown: kramdown
 
-theme: jekyll-theme-cayman
+theme: jekyll-theme-leap-day
