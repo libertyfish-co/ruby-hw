@@ -45,3 +45,5 @@ rbenv sudo bundle exec ruby l_chika.rb
 
 * 21番ピンを使用しましたが、別のピンに接続して、コードを変更してみましょう。
 * 点滅の間隔を変更してみましょう。
+
+回答例は[こちら](https://github.com/libertyfish-co/ruby-hw/blob/master/answers/output/l_chika/l_chika.rb){:target='_blank'}

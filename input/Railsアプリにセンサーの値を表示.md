@@ -260,3 +260,5 @@ wlan0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
 
 1. ページに表示している、フォトトランジスターの値をボタン押下で、更新する様にしましょう。
 2. Lチカの配線を参考にして、LEDを配線して、ページ上のボタンで、LED を On Off できる様にしましょう。
+
+回答例は[こちら](https://github.com/libertyfish-co/ruby-hw/tree/master/answers/input/get-value-from-sensor){:target='_blank'}
