@@ -20,7 +20,7 @@
 
 
 ## 配線
-<img src='images/web_mortor.png' alt='WEBラジコン回路配線図' width="350" />
+<img src='../images/web_mortor.png' alt='WEBラジコン回路配線図' width="350" />
 
 ## 動作確認用のコード
 ## Rails アプリ作成
