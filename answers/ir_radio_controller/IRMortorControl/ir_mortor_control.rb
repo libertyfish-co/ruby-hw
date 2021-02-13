@@ -52,8 +52,9 @@ end
 def read_ir(ir_receiver, signal)
   # puts "IR read start ... "
   captureTimings = []
-  pre_time = Time.now
-  while Time.now - pre_time < RECORDING_TIMEOUT
+  read_start_time = Time.now
+  pre_time = read_start_time
+  while Time.now - read_start_time < RECORDING_TIMEOUT
     if ir_receiver.read != signal
       now_time = Time.now
       captureTimings << now_time - pre_time
