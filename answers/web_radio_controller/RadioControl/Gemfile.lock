@@ -79,6 +79,7 @@ GEM
     concurrent-ruby (1.1.8)
     crass (1.0.6)
     erubi (1.10.0)
+    eventmachine (1.0.9)
     ffi (1.14.2)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
@@ -106,6 +107,9 @@ GEM
     nokogiri (1.11.1)
       mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
+    pi_piper (2.0.0)
+      eventmachine (= 1.0.9)
+      ffi
     public_suffix (4.0.6)
     puma (5.2.1)
       nio4r (~> 2.0)
@@ -209,6 +213,7 @@ DEPENDENCIES
   capybara (>= 3.26)
   jbuilder (~> 2.7)
   listen (~> 3.3)
+  pi_piper
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1.1)

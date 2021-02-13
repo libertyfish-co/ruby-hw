@@ -100,13 +100,17 @@ wlan0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
 モーターが想定通り動いていることを確認します。
 
 http://XXX.XXX.XXX.XXX:3000/mortor/forward
+
 http://XXX.XXX.XXX.XXX:3000/mortor/left
+
 http://XXX.XXX.XXX.XXX:3000/mortor/right
+
 http://XXX.XXX.XXX.XXX:3000/mortor/back
+
 http://XXX.XXX.XXX.XXX:3000/mortor/breake
 
 ※XXX XXX XXX.XXXは調べたIPアドレスです。
 
-回答ソースの例は[こちら](/answers/web_radio_controller/RadioControl)
+回答ソースの例は[こちら](web_radio_controller/RadioControl)
 
 ※ラジコンAPI、ラジコン画面、カメラストリーム配信の対応が入った回答ソースです。
