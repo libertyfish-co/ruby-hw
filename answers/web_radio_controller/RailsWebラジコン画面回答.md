@@ -265,6 +265,6 @@ wlan0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
 
 ボタンまたはキーで操作してみましょう。
 
-回答ソースの例は[こちら](web_radio_controller/RadioControl)
+回答ソースの例は[こちら](RadioControl)
 
 ※ラジコンAPI、ラジコン画面、カメラストリーム配信の対応が入った回答ソースです。
