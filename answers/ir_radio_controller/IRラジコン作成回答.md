@@ -121,6 +121,6 @@ rbenv sudo bundle exec ruby ir_mortor_control.rb
 
 リモコンを送信し、割り当てた学習内容でモーターが想定通りに動くことを確認します。
 
-回答ソースの例は[こちら](https://github.com/libertyfish-co/ruby-hw/blob/master/answers/ir_radio_controller/IRMortorControl/ir_mortor_control.rb)
+回答ソースの例は[こちら](IRMortorControl/ir_mortor_control.rb)
 
 
