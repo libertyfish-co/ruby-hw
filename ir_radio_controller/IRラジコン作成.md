@@ -25,7 +25,7 @@
 ## 配線
 <img src='../images/ir_mortor.png' alt='赤外線ラジコン回路配線図' width="350" />
 
-
+赤外線受信モジュールのパーツは、https://jumbleat.com/fritzing_custom/ で公開されているパーツを利用させていただきました。
 
 ## 動作確認用のコード
 
