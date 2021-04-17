@@ -36,7 +36,7 @@ source "https://rubygems.org"
 
 git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
-gem "rails", "5.2.2" # ここのコメントアウトを外し、バージョンを指定します。(「,」を忘れずに)
+gem "rails", "5.2.5" # ここのコメントアウトを外し、バージョンを指定します。(「,」を忘れずに)
 ```
 
 ```bash
