@@ -41,7 +41,7 @@ RaspberryPiの初期設定が必要なので、 [RaspberryPi初期設定](Raspbe
 * [Lチカ](output/Lチカ.md)
 * [圧電スピーカー](output/圧電スピーカー.md)
 * [モーターを動かす](output/モーターを動かす.md)
-* [モーターを正転・逆転する](output/モーターを正転・逆転する.md)
+* [モーターを正転・逆転する](output/モーターを正転・逆転する_2.md)
 
 ### 入力系
 
