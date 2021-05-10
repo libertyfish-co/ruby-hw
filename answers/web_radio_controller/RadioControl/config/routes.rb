@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   root 'top#show'
-  get 'top/show'
   get 'mortor/forward'
   get 'mortor/left'
   get 'mortor/right'

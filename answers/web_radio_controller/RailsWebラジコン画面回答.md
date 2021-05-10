@@ -219,7 +219,6 @@ function radioApi(apiName)
 Rails.application.routes.draw do
   root 'top#show' # 追加
 
-  get 'top/show' # 追加
   get 'mortor/forward'
   get 'mortor/left'
   get 'mortor/right'
