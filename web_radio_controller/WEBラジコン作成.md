@@ -101,17 +101,17 @@ namespace :mortorcontrol_server do
     server_method
   end
 
-  # モーター1
+  # モーター左
   # GPIO 20 -> 正転?
   # GPIO 21 -> 逆転?
   # GPIO 12 -> PWM
-  @motor_left = Ta7291pDebug.new(12, 20, 21, 0.7)
+  @motor_left = Ta7291p.new(12, 20, 21, 0.7)
   
-  # モーター2
+  # モーター右
   # GPIO 5 -> 正転?
   # GPIO 6 -> 逆転?
   # GPIO 13 -> PWM
-  @motor_right = Ta7291pDebug.new(13, 5, 6, 0.7)
+  @motor_right = Ta7291p.new(13, 5, 6, 0.7)
   
   # サーバ接続 OPEN
   Server = TCPServer.new(2000)
@@ -166,13 +166,13 @@ namespace :mortorcontrol_server do
   end
 
   def left()
-    @motor_left.forward()
-    @motor_right.back()
+    @motor_left.back()
+    @motor_right.forward()
   end
 
   def right()
-    @motor_left.back()
-    @motor_right.forward()
+    @motor_left.forward()
+    @motor_right.back()
   end
 
   def back()
