@@ -53,14 +53,14 @@ bundle install --path vendor/bundle
 #### `rails new`
 
 ```bash
-bundle exec rails new RadioControl
+bundle exec rails new .
 # 途中で Gemfile を上書きするか確認されますが、 Enter キーを押下する
 # かなり時間がかかります
 ```
 
 #### webpackインストール
 ```bash
-rails webpacker:install
+bundle exec rails webpacker:install
 ```
 
 #### 設定
@@ -73,7 +73,7 @@ gem 'pi_piper' # => PiPiper を使用するので追加
 追加した gem をインストールします。
 
 ```bash
-bundle update
+bundle install
 ```
 
 ### モーター制御サーバー作成
