@@ -105,13 +105,13 @@ namespace :mortorcontrol_server do
   # GPIO 20 -> 正転?
   # GPIO 21 -> 逆転?
   # GPIO 12 -> PWM
-  @motor_left = Ta7291p.new(12, 20, 21, 0.7)
+  @motor_left = Ta7291p.new(pwm_pin_id: 12, forward_pin_id: 20, back_pin_id: 21, power_value: 0.7)
   
   # モーター右
   # GPIO 5 -> 正転?
   # GPIO 6 -> 逆転?
   # GPIO 13 -> PWM
-  @motor_right = Ta7291p.new(13, 5, 6, 0.7)
+  @motor_right = Ta7291p.new(pwm_pin_id: 13, forward_pin_id: 5, back_pin_id: 6, power_value: 0.7)
   
   # サーバ接続 OPEN
   Server = TCPServer.new(2000)
