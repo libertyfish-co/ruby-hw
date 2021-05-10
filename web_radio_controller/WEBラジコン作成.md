@@ -23,9 +23,9 @@
 <img src='../images/web_mortor.png' alt='WEBラジコン回路配線図' width="350" />
 
 ## 動作確認用のコード
-## Rails アプリ作成
+### Rails アプリ作成
 
-### `bundle init`
+#### `bundle init`
 
 ```bash
 cd ~/
@@ -33,7 +33,7 @@ mkdir RadioControl; cd $_
 bundle init
 ```
 
-### Gemfile 編集
+#### Gemfile 編集
 
 ```ruby
 # frozen_string_literal: true
@@ -50,7 +50,7 @@ bundle install --path vendor/bundle
 # かなり時間がかかります
 ```
 
-### `rails new`
+#### `rails new`
 
 ```bash
 bundle exec rails new RadioControl
