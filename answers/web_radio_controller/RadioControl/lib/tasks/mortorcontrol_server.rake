@@ -1,6 +1,5 @@
 require 'socket'
-require './lib/tasks/ta7291p'
-require './lib/tasks/ta7291pdebug'
+require './lib/components/ta7291p'
 
 namespace :mortorcontrol_server do
   task wake_up: :environment do

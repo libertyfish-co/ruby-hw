@@ -94,7 +94,7 @@ bundle exec rails generate task mortorcontrol_server
 
 ```ruby
 require 'socket'
-require './lib/tasks/ta7291p'
+require './lib/components/ta7291p'
 
 namespace :mortorcontrol_server do
   task wake_up: :environment do
@@ -188,7 +188,7 @@ namespace :mortorcontrol_server do
 end
 ```
 
-`RadioControl/lib/tasks/Ta7291p.rb` ファイルを作成し、以下の通り修正します。
+`RadioControl/lib/components/ta7291p.rb` ファイルを作成し、以下の通り修正します。
 ```ruby
 require 'pi_piper'
 
