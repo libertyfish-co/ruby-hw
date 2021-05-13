@@ -1,22 +1,22 @@
 $(function() {
   $('#forward').on('click', function() {
-    radioApi('forward')
+    radioApi('Forward')
   });
 
   $('#left').on('click', function() {
-    radioApi('left')
+    radioApi('Left')
   });
 
   $('#right').on('click', function() {
-    radioApi('right')
+    radioApi('Right')
   });
 
   $('#back').on('click', function() {
-    radioApi('back')
+    radioApi('Back')
   });
 
   $('#breake').on('click', function() {
-    radioApi('breake')
+    radioApi('Breake')
   });
 });
 var mortorControls ={ArrowUp: false, ArrowLeft: false, ArrowRight: false, ArrowDown: false};
@@ -39,16 +39,16 @@ $(window).keydown(function(e){
 
   switch (code) {
     case 'ArrowUp':
-      radioApi('forward')
+      radioApi('Forward')
       break;
     case 'ArrowLeft':
-      radioApi('left')
+      radioApi('Left')
       break;
     case 'ArrowRight':
-      radioApi('right')
+      radioApi('Right')
       break;
     case 'ArrowDown':
-      radioApi('back')
+      radioApi('Back')
       break;
     default:
       break;
@@ -62,20 +62,22 @@ $(window).keyup(function(e){
   console.log('keyup:' + code);
   mortorControls[code] = false;
 
-  radioApi('breake')
+  radioApi('Breake')
   return true;
 });
 
-function radioApi(apiName)
+function radioApi(functionName)
 {
-  var url = '/mortor/' + apiName;
+  var url = '/mortor/control';
   $.ajax({
     url: url,
-    type: 'GET',
+    type: 'POST',
     dataType: 'json',
+    data : {control : functionName},
     timeout: 5000,
   })
   .done(function(data) {
+      console.log(JSON.stringify(data));
   })
   .fail(function() {
   });

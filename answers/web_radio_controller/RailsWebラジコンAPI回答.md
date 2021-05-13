@@ -5,29 +5,11 @@
 
 ```ruby
 class MortorController < ApplicationController
-  def forward
-    send_request("Forward")
-    render json: [ status: :ok ]
-  end
-
-  def left
-    send_request("Left")
-    render json: [ status: :ok ]
-  end
-
-  def right
-    send_request("Right")
-    render json: [ status: :ok ]
-  end
-
-  def back
-    send_request("Back")
-    render json: [ status: :ok ]
-  end
-
-  def breake
-    send_request("Breake")
-    render json: [ status: :ok ]
+  protect_from_forgery
+  def control
+    function_name = params["control"]
+    send_request(function_name)
+    render json: [ status: :ok , control: function_name]
   end
 
   private
@@ -52,11 +34,7 @@ WebAPIのルートを追加します。
 `RadioControl/config/routes.rb`
 ```ruby
 Rails.application.routes.draw do
-  get 'mortor/forward'
-  get 'mortor/left'
-  get 'mortor/right'
-  get 'mortor/back'
-  get 'mortor/breake'
+  post 'mortor/control'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
 ```
