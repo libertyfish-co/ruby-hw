@@ -1,6 +1,6 @@
 <%= javascript_pack_tag 'top/mortor', 'data-turbolinks-track': 'reload' %>
 <h1>RadioControll</h1>
-<img src="http://192.168.11.253:8080/?action=stream" />
+<img src="<%="#{ENV['VIDEO_STREAM_URL']}:#{ENV['VIDEO_STREAM_PORT']}/?action=stream" %>" />
 <div class="controller-left">
   <div class="cross-layout">
     <button id="forward" class="position-top btn cross-key-btn"><span class="top-mark">▲</span></button>
