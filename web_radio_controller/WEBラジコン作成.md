@@ -42,7 +42,7 @@ source "https://rubygems.org"
 
 git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
-gem "rails", "6.1.1"  # ここのコメントアウトを外し、バージョンを指定します。(「,」を忘れずに)
+gem "rails", "6.1.3"  # ここのコメントアウトを外し、バージョンを指定します。(「,」を忘れずに)
 ```
 
 ```bash
