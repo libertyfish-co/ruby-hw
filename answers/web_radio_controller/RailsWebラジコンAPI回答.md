@@ -82,18 +82,20 @@ wlan0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 ```
 
-今操作しているPCでWebブラウザを起動して、以下URLにアクセスし
-モーターが想定通り動いていることを確認します。
+今操作しているPCでAPIのテストします。
+Chrome にアドオン `Talend API Tester` を利用すると確認できます。
 
-http://XXX.XXX.XXX.XXX:3000/mortor/forward
+<img src="../../images/documents/web_radio_controller_api_test.png">
 
-http://XXX.XXX.XXX.XXX:3000/mortor/left
+`curl` を使用できる場合は、次のコマンドを実行します。
 
-http://XXX.XXX.XXX.XXX:3000/mortor/right
-
-http://XXX.XXX.XXX.XXX:3000/mortor/back
-
-http://XXX.XXX.XXX.XXX:3000/mortor/breake
+```
+curl -X POST -H "Content-Type: application/json" -d '{"control": "Forward"}'  http://XXX.XXX.XXX.XXX:3000/mortor/control
+curl -X POST -H "Content-Type: application/json" -d '{"control": "Left"}'  http://XXX.XXX.XXX.XXX:3000/mortor/control
+curl -X POST -H "Content-Type: application/json" -d '{"control": "Right"}'  http://XXX.XXX.XXX.XXX:3000/mortor/control
+curl -X POST -H "Content-Type: application/json" -d '{"control": "Back"}'  http://XXX.XXX.XXX.XXX:3000/mortor/control
+curl -X POST -H "Content-Type: application/json" -d '{"control": "Breake"}'  http://XXX.XXX.XXX.XXX:3000/mortor/control
+```
 
 ※XXX XXX XXX.XXXは調べたIPアドレスです。
 
