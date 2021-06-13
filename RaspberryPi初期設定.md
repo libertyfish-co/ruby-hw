@@ -106,3 +106,17 @@ git clone https://github.com/dcarley/rbenv-sudo.git ~/.rbenv/plugins/rbenv-sudo
 ```bash
 sudo apt-get install nodejs
 ```
+
+## yarn インストール
+
+Rails 6のバージョンでは `yarn` JavaScriptパッケージ管理マネージャーが必要のためインストールします。
+
+
+以下サイトを参考に、npmパッケージマネージャーをインストールします。
+https://qiita.com/seibe/items/36cef7df85fe2cefa3ea
+
+npmインストール後、以下コマンドで`yarn`をインストールします。
+```bash
+sudo npm install -g yarn
+```
+

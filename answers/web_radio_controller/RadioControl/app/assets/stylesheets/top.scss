@@ -1,0 +1,76 @@
+// Place all the styles related to the Top controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+/** 下準備_ボタン **/
+
+.btn {
+    border-style: none;
+    cursor: pointer;
+}
+
+/** 下準備_十字配置部品 **/
+
+.cross-layout {
+    display: grid;
+    grid-template-columns: 30px 30px 30px;
+    grid-template-rows: 30px 30px 30px;
+}
+
+.cross-layout .position-top {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+}
+
+.cross-layout .position-left {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+}
+
+.cross-layout .position-center {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+}
+
+.cross-layout .position-right {
+    grid-row: 2 / 3;
+    grid-column: 3/4;
+}
+
+.cross-layout .position-bottom {
+    grid-row: 3 / 4;
+    grid-column: 2/3;
+}
+
+/**　コントローラーの左側_十字キー**/
+
+.cross-key-btn {
+    width: 30px;
+    height: 30px;
+    background-color: rgba(66, 86, 123, 0.5);
+}
+
+.left-mark {
+    display: block;
+    transform: rotate(-90deg);
+}
+
+.right-mark {
+    display: block;
+    transform: rotate(90deg);
+}
+
+.bottom-mark {
+    display: block;
+    transform: rotate(180deg);
+}
+
+/**　コントローラーの左側_十字キーを灰色の円形で囲む**/
+
+.controller-left {
+    display: inline-block;
+    background-color: rgb(229, 227, 250);
+    padding: 30px;
+    border-radius: 50%;
+}
+
