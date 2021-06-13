@@ -1,11 +1,19 @@
 # Rails Webラジコン作成回答
 
 ## モーター制御WEBAPIの作成
+
+`app/controllers/application_controller.rb` を修正して、`Can't verify CSRF token authenticity` を回避します。
+
+```ruby
+class ApplicationController < ActionController::Base
+  skip_forgery_protection
+end
+```
+
 `app/controllers/mortor_controller.rb` を作成してモーター制御WebAPIを作成します。
 
 ```ruby
 class MortorController < ApplicationController
-  protect_from_forgery
   def control
     function_name = params["control"]
     send_request(function_name)

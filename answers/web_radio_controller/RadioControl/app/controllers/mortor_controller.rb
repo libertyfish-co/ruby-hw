@@ -1,5 +1,4 @@
 class MortorController < ApplicationController
-  protect_from_forgery
   def control
     function_name = params["control"]
     send_request(function_name)
