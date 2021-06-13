@@ -213,10 +213,12 @@ class Ta7291p
   end
 
   def forward()
+    @back_pin.off
     @forward_pin.on
   end
 
   def back()
+    @forward_pin.off
     @back_pin.on
   end
 
