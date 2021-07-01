@@ -8,4 +8,4 @@ mpg321 を使用する。mpg321 は MP3 専用です。
 
 ruby からMP3を再生
 
-`exec('mpg321 sample.mp3')`
+`exec('sudo mpg321 sample.mp3')`

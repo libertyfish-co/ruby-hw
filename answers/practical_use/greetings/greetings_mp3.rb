@@ -11,7 +11,7 @@ loop do
     unexp.write(21)
     unexp.close
     
-    # .wavファイルを再生 mpg321=>.mp3
+    # .wavファイルを再生 mpg321 => .mp3
     exec('sudo mpg321 gm_maoudamashii_8bit16.mp3')
   end
   sleep 0.5
