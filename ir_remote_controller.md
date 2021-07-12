@@ -38,8 +38,8 @@ https://akizukidenshi.com/download/ds/sharp/GP1UXC4xQS_j.pdf
     RECORDING_TIMEOUT = 5
 
     # 赤外線受信モジュールと記録ボタン
-    ir_receiver = PiPiper::Pin.new :pin => 4
-    recording_button = PiPiper::Pin.new :pin => 25
+    ir_receiver = PiPiper::Pin.new pin: 4
+    recording_button = PiPiper::Pin.new pin: 25
 
     timings = []
     signal = ir_receiver.read
@@ -172,15 +172,15 @@ W = V * A = (5-1.35) * 0.0776 = 0.283W
 
 75Ωの抵抗を使用する場合は
 ```
-I = V / R = (5-1.35) / 75 = 0.0474A
-W = V * A = (5-1.35) * 0.0474 = 0.173W
+I = V / R = (5-1.35) / 75 = 0.0486A
+W = V * A = (5-1.35) * 0.0486 = 0.177W
 ```
 となり、1/4W抵抗の範囲内に収まりますので、今回は75Ωの抵抗を使用することにします。1/2W 47Ωの抵抗があればそれでも良いですし、1W 10Ωの抵抗を2つ直列で配置して抵抗値を20Ωとして利用できます。また、1W 10Ωの抵抗を1つとLEDを2つ直列で配置する組み合わせでも利用できます。
 
 ### コード(部分)
 ```ruby
     ir_transmitter = PiPiper::Pwm.new pin: 18, clock: 75.kilohertz, value: 0.5, start: false
-    send_button = PiPiper::Pin.new :pin => 24
+    send_button = PiPiper::Pin.new pin: 24
 
     print "IR transmit start... "
     signal = 1
@@ -223,12 +223,12 @@ include PiPiper
 RECORDING_TIMEOUT = 5
 
 # 赤外線受信モジュールと記録ボタン
-ir_receiver = PiPiper::Pin.new :pin => 4
-recording_button = PiPiper::Pin.new :pin => 25
+ir_receiver = PiPiper::Pin.new pin: 4
+recording_button = PiPiper::Pin.new pin: 25
 
 # 赤外線LEDと送信ボタン, 38KHz間隔でON/OFFを1:1で作成したいので更に倍にしています(75 / 2 = 37.5 ≒ 38)
 ir_transmitter = PiPiper::Pwm.new pin: 18, clock: 75.kilohertz, value: 0.5, start: false
-send_button = PiPiper::Pin.new :pin => 24
+send_button = PiPiper::Pin.new pin: 24
 
 # サンプルデータ
 timings = [12908,2924,1049,934,1052,939,1047,949,1038,941,1046,936,1051,936,1050]
