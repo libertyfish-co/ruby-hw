@@ -213,7 +213,7 @@ W = V * A = (5-1.35) * 0.0486 = 0.177W
 赤外線受信モジュールのパーツは、https://jumbleat.com/fritzing_custom/ で公開されているパーツを利用させていただきました。
 
 ### コード(全体)
-```ruby:ir_receiver_and_ir_transmitter.rb
+```ruby
 #
 # 赤外線リモコンの学習
 #
