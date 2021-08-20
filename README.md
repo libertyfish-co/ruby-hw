@@ -55,3 +55,6 @@ RaspberryPiの初期設定が必要なので、 [RaspberryPi初期設定](Raspbe
 ### 応用
 
 * [クローラーを動かす](practical_use/クローラーを動かす.md)
+* [WEBラジコン作成](web_radio_controller/WEBラジコン作成.md)
+* [帰宅時に挨拶する](practical_use/帰宅時に挨拶する.md)
+* [IRラジコン作成](ir_radio_controller/IRラジコン作成.md)
