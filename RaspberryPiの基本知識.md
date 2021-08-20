@@ -17,5 +17,6 @@
     * channel 1: GPIO 12, 18
     * channel 2: GPIO 13, 19
 
+GPIO Pin の配置図
 
 ![Pin配置](https://cdn-ak.f.st-hatena.com/images/fotolife/y/yuriai0001/20150524/20150524180432.png)

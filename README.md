@@ -1,5 +1,13 @@
 # Ruby ハードウェアプログラミング体験教材
 
+これは、Ruby で RasperryPi に接続された電子部品を使用して遊ぶ教材です。
+
+RasperryPi を全く触ったことがない場合は、 [RaspberryPiの基本知識](RaspberryPiの基本知識.md){:target='_blank'} を参考にしながら、電子部品をピンに刺してください。
+電子工作の経験がない方は、 [用語集](用語集.md){:target='_blank'} を参考にすると理解が進みます。
+
+教材の、[必要な設定](#必要な設定) が終われば、まずは、[Lチカ](output/Lチカ.md) から実践するのがおすすめです。
+各教材ページには、教材作成に用いたパーツを記載しておりますので、参考にしてください。
+
 ## 教材を進めるために最低限必要なパーツ
 
 ### RasperryPi
@@ -21,12 +29,6 @@
 | Cixi Wanjie Electronic Co.,Ltd | P-05294 | BB-801 | ブレッドボード | |
 | Herwell Asia Limited | C-08932 | DG01032-0024-BK-015 | ブレッドボード・ジャンパーワイヤ（オス－メス）　１５ｃｍ（黒） | |
 | Cixi Wanjie Electronic Co.,Ltd | C-05159 | BBJ-65 | ブレッドボード・ジャンパーワイヤ（オス－オス）セット　各種 合計６０本以上 | |
-
-## RaspberryPi 関連の基本情報
-
-* [RaspberryPiの基本知識](RaspberryPiの基本知識.md)
-  * RaspberryPi の PIN 配置図を載せています。回路を作成するときに参考にしてください。
-* [用語集](用語集.md)
 
 ## 教材
 
