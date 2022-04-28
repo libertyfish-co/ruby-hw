@@ -5,7 +5,7 @@
 RaspberryPi を手元のPCで操作するために SSH の設定をします。
 この設定には、 RaspberryPi にディスプレイ、キーボードとマウスを接続して操作が必要です。
 
-1. [Raspberry PiにNOOBSでOSをインストールする方法](https://raspida.com/raspixnoobs){:target='_blank'} を参考にOSのインストールを行います。
+1. [Raspberry PiにNOOBSでOSをインストールする方法](https://www.raspberrypi.com/software/operating-systems/){:target='_blank'} を参考にOSのインストールを行います。
 1. 新しい Raspberry Pi はデフォルトで SSH が無効になっていますので、有効に変更します。
     1. ベリーマーク -> 設定 -> Raspberry Pi の設定 まで進みます。
     2. インターフェースタブ の SSH を有効に変更します。
@@ -69,7 +69,27 @@ sudo vi /boot/config.txt
 sudo apt install -y libssl-dev libreadline-dev
 ```
 
-あとは [ubuntu + rbenvでrubyをインストール](https://qiita.com/tanagoda/items/44d12ef0d52b2dc9d560){:target='_blank'} を参考にインストールします。
+Rubyのバージョン管理システムのrbenvをインストールします
+
+```bash
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+source ~/.bashrc
+git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
+```
+
+rbenvを使ってRubyをインストールします
+
+```bash
+rbenv install 2.7.4
+```
+
+インストールしたRubyを常用のRubyとして設定します
+
+```bash
+rbenv global 2.7.4
+```
 
 ## sudo権限付与
 
@@ -107,19 +127,35 @@ git clone https://github.com/dcarley/rbenv-sudo.git ~/.rbenv/plugins/rbenv-sudo
 `rails new` を実行すると Node.js が必要になるのでインストール
 
 ```bash
-sudo apt-get install nodejs
+git clone https://github.com/nodenv/nodenv.git ~/.nodenv
+git clone https://github.com/nodenv/node-build.git ~/.nodenv/plugins/node-build
+echo 'export PATH="$HOME/.nodenv/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(nodenv init -)"' >> ~/.bashrc
+source ~/.bashrc
+```
+
+nodenvを使ってNode.jsをインストールします
+
+```bash
+nodenv install 16.14.0
+```
+
+インストールしたNode.jsを常用のnodeとして設定します
+
+```bash
+nodenv global 16.14.0
 ```
 
 ## yarn インストール
 
-Rails 6のバージョンでは `yarn` JavaScriptパッケージ管理マネージャーが必要のためインストールします。
-
-
-以下サイトを参考に、npmパッケージマネージャーをインストールします。
-https://qiita.com/seibe/items/36cef7df85fe2cefa3ea
-
-npmインストール後、以下コマンドで`yarn`をインストールします。
 ```bash
-sudo npm install -g yarn
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt update
+sudo apt install yarn
+sudo apt remove nodejs
+sudo ln -s `which node` /usr/bin/node
 ```
-
+メモ:
+   個々のユーザーディレクトリに存在するnodeコマンドを/usr/bin/nodeにリンクを張るのは筋が悪いのですが
+   /usr/bin/nodeにコマンドがあることが期待されることがあるので暫定対応です。
