@@ -21,4 +21,4 @@
 MCP3008 は 8ch のセンサー入力端子を持っています。
 それぞれの、入力端子にフォトトランジスターなどのセンサーを取り付けます。
 
-詳しい説明は 「[「SPI」の解説](https://synapse.kyoto/glossary/glossary.php?word=SPI){:target='_blank'}」をご覧ください。
+詳しい説明は 「[「SPI」の解説](https://synapse.kyoto/glossary/glossary.php?word=SPI)」をご覧ください。

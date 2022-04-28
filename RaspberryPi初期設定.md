@@ -5,7 +5,7 @@
 RaspberryPi を手元のPCで操作するために SSH の設定をします。
 この設定には、 RaspberryPi にディスプレイ、キーボードとマウスを接続して操作が必要です。
 
-1. [Raspberry PiにNOOBSでOSをインストールする方法](https://www.raspberrypi.com/software/operating-systems/){:target='_blank'} を参考にOSのインストールを行います。
+1. [Raspberry PiにNOOBSでOSをダウンロードするページ](https://www.raspberrypi.com/software/operating-systems/) を参考にOSのインストールを行います。
 1. 新しい Raspberry Pi はデフォルトで SSH が無効になっていますので、有効に変更します。
     1. ベリーマーク -> 設定 -> Raspberry Pi の設定 まで進みます。
     2. インターフェースタブ の SSH を有効に変更します。
@@ -14,7 +14,7 @@ RaspberryPi を手元のPCで操作するために SSH の設定をします。
 ## Samba インストール
 
 Raspberry Pi 上のファイルを手元のPCで直接編集するのに使用します。
-[Ubuntu samba インストールチュートリアル](https://tutorials.ubuntu.com/tutorial/install-and-configure-samba){:target='_blank'} に従ってインストールします。
+[Ubuntu samba インストールチュートリアル](https://tutorials.ubuntu.com/tutorial/install-and-configure-samba)に従ってインストールします。
 
 ## SPI設定
 
