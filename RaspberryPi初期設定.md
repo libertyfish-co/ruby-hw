@@ -69,7 +69,27 @@ sudo vi /boot/config.txt
 sudo apt install -y libssl-dev libreadline-dev
 ```
 
-あとは [ubuntu + rbenvでrubyをインストール](https://qiita.com/tanagoda/items/44d12ef0d52b2dc9d560){:target='_blank'} を参考にインストールします。
+Rubyのバージョン管理システムのrbenvをインストールします
+
+```bash
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+source ~/.bashrc
+git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
+```
+
+rbenvを使ってRubyをインストールします
+
+```bash
+rbenv install 2.7.4
+```
+
+インストールしたRubyを常用のRubyとして設定します
+
+```bash
+rbenv global 2.7.4
+```
 
 ## sudo権限付与
 
